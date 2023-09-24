@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Modal from "./modal";
 export default function Modalpage() {
   const [showModal, setshowModal] = useState(true);
   const eventHandling = () => {
@@ -8,10 +8,7 @@ export default function Modalpage() {
   return (
     <div>
       <div>
-        <p className=" f">
-          hiiii, this is a modal , i developed it to improve my programming
-          skills {";) "}
-        </p>
+        <h3></h3>
       </div>
       <div className="flex justify-center ">
         <div className="bg-slate-100 w-72 h-16 text-center mt-3.5 ">
@@ -24,8 +21,8 @@ export default function Modalpage() {
             Open
           </button>
         </div>
-        {showModal && <div> hhhhh</div>}
       </div>
+      {showModal && <Modal eventHandling={eventHandling} />}
     </div>
   );
 }
