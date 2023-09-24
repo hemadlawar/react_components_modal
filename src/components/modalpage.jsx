@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Modal from "./modal";
+import { ReactDOM } from "react";
 export default function Modalpage() {
+  // this state is responsible for present and hide the portal element
   const [showModal, setshowModal] = useState(true);
+
+  // the event handler to show and hide the portal elemnt
   const eventHandling = () => {
     setshowModal(!showModal);
   };
@@ -22,6 +26,7 @@ export default function Modalpage() {
           </button>
         </div>
       </div>
+      {/**  */}
       {showModal && <Modal eventHandling={eventHandling} />}
     </div>
   );
